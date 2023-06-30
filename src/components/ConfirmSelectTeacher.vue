@@ -18,33 +18,33 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
-import { ElMessageBox } from "element-plus";
-import type { User } from "@/datasource/Types";
-import { useStore } from "@/stores";
+import { ref } from 'vue'
+import { ElMessageBox } from 'element-plus'
+import type { User } from '@/datasource/Types'
+import { useStore } from '@/stores'
 interface Props {
-  teacher: User;
-  student: User;
+  teacher: User
+  student: User
 }
-const props = withDefaults(defineProps<Props>(), {});
+const props = withDefaults(defineProps<Props>(), {})
 
-const dialogVisible = ref(false);
+const dialogVisible = ref(false)
 
 const submit = () => {
-  dialogVisible.value = false;
-  const store = useStore();
-  store.selectTeacher({ teacher: props.teacher, student: props.student });
-};
+  dialogVisible.value = false
+  const store = useStore()
+  store.selectTeacher({ teacher: props.teacher, student: props.student })
+}
 
 const handleClose = (done: () => void) => {
-  ElMessageBox.confirm("确认关闭吗?")
+  ElMessageBox.confirm('确认关闭吗?')
     .then(() => {
-      done();
+      done()
     })
     .catch(() => {
       // catch error
-    });
-};
+    })
+}
 </script>
 <style scoped>
 .dialog-footer button:first-child {

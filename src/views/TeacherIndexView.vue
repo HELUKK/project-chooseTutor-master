@@ -11,13 +11,12 @@
         <div class="cardRow">用户类型: 老师</div>
       </el-card>
     </el-col>
-    <el-col style="margin-top: 20px"> 请点击左侧导航栏去完成您的需求 </el-col>
   </el-row>
 </template>
 <script setup lang="ts">
-import { useStore } from "@/stores";
-const store = useStore();
-const { user } = store;
+import { useStore } from '@/stores'
+const store = useStore()
+const { user } = store
 </script>
 <style scoped>
 .cardRow {

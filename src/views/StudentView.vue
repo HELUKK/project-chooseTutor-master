@@ -5,11 +5,7 @@
     </el-header>
     <el-container>
       <el-aside width="20%">
-        <el-menu
-          :default-active="$route.path"
-          background-color="transparent"
-          router
-        >
+        <el-menu :default-active="$route.path" background-color="transparent" router>
           <el-menu-item index="/student/index">
             <el-icon>
               <icon-menu />
@@ -26,21 +22,17 @@
       </el-aside>
       <el-container>
         <el-main>
-          <el-row >
+          <el-row>
             <router-view />
           </el-row>
         </el-main>
-        <el-footer height="40px">
-          <user-footer></user-footer>
-        </el-footer>
+        <el-footer height="40px"> </el-footer>
       </el-container>
     </el-container>
   </el-container>
 </template>
 <script setup lang="ts">
-import { RouterView } from "vue-router";
-import UserHeader from "@/components/UserHeader.vue";
-import type { Menu as iconMenu, List } from "@element-plus/icons-vue";
-import UserFooter from "@/components/UserFooter.vue";
+import { RouterView } from 'vue-router'
+import UserHeader from '@/components/UserHeader.vue'
 </script>
 <style></style>

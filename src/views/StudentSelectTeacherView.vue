@@ -13,8 +13,7 @@
           {{ scope.row.unit.length }}
         </template>
       </el-table-column>
-      <el-table-column prop="maxCount" label="最多人数" width="100">
-      </el-table-column>
+      <el-table-column prop="maxCount" label="最多人数" width="100"> </el-table-column>
       <el-table-column label="选择导师" width="100">
         <template #default="scope">
           <ConfirmSelectTeacher
@@ -34,32 +33,32 @@
 </template>
 
 <script setup lang="ts">
-import { useStore } from "@/stores";
-import { computed } from "@vue/reactivity";
-import type { User } from "@/datasource/Types";
-import ConfirmSelectTeacher from "@/components/ConfirmSelectTeacher.vue";
+import { useStore } from '@/stores'
+import { computed } from '@vue/reactivity'
+import type { User } from '@/datasource/Types'
+import ConfirmSelectTeacher from '@/components/ConfirmSelectTeacher.vue'
 
-const store = useStore();
-store.listteachers();
-const teachers = computed(() => store.teachers);
-const me = computed(() => store.user);
+const store = useStore()
+store.listteachers()
+const teachers = computed(() => store.teachers)
+const me = computed(() => store.user)
 const teacher = computed(() => {
   return store.teachers.find((data) => {
-    return store.user.unit[0] === data.id;
-  });
-});
+    return store.user.unit[0] === data.id
+  })
+})
 const hasTeacher = computed(() => {
-  return me.value.maxCount > me.value.unit.length;
-});
+  return me.value.maxCount > me.value.unit.length
+})
 const tableRow = ({ row }: { row: User }) => {
   if (row.maxCount <= row.unit.length) {
-    return "warning-row";
+    return 'warning-row'
   }
-};
+}
 
 const exitTeacher = () => {
-  store.exitTeacher({ user: store.user });
-};
+  store.exitTeacher({ user: store.user })
+}
 </script>
 
 <style>

@@ -26,24 +26,24 @@
   </el-form>
 </template>
 <script setup lang="ts">
-import { reactive } from "vue";
-import { useStore } from "@/stores";
+import { reactive } from 'vue'
+import { useStore } from '@/stores'
 
-const store = useStore();
+const store = useStore()
 const loginInfo = reactive({
-  id: "",
-  password: "",
-});
+  id: '',
+  password: ''
+})
 
 const login = () => {
   const user = {
     id: loginInfo.id,
-    password: loginInfo.password,
-  };
-  store.loginGuard(user);
-  loginInfo.id = "";
-  loginInfo.password = "";
-};
+    password: loginInfo.password
+  }
+  store.loginGuard(user)
+  loginInfo.id = ''
+  loginInfo.password = ''
+}
 </script>
 <style scoped>
 .el-form {
@@ -53,7 +53,7 @@ const login = () => {
   max-width: 500px;
   min-width: 400px;
   max-height: 500px;
-  border: 4px solid rgb(63, 112, 134);
+  border: 4px solid rgb(72, 161, 202);
   border-radius: 20px;
   padding: 20px;
 }

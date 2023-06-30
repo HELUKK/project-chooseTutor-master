@@ -3,32 +3,32 @@ import type { User } from "@/datasource/Types";
 export function listStudents() {
   const students: User[] = [
     {
-      id: "2019000001",
-      password: "2019000001",
+      id: "2020210001",
+      password: "2020210001",
       role: "student",
       name: "小明",
       unit: [],
       maxCount: 1,
     },
     {
-      id: "2019000002",
-      password: "2019000002",
+      id: "2020210002",
+      password: "2020210002",
       role: "student",
       name: "小红",
       unit: ["1000000001"],
       maxCount: 1,
     },
     {
-      id: "2019000003",
-      password: "2019000003",
+      id: "2020210003",
+      password: "2020210003",
       role: "student",
       name: "小黑",
       unit: [],
       maxCount: 1,
     },
     {
-      id: "2019000004",
-      password: "2019000004",
+      id: "2020210004",
+      password: "2020210004",
       role: "student",
       name: "小白",
       unit: [],
@@ -46,7 +46,7 @@ export function listTeachers() {
       role: "teacher",
       name: "bo",
       unit: ["2019000002"],
-      maxCount: 1,
+      maxCount: 3,
     },
     {
       id: "1000000002",
@@ -54,7 +54,7 @@ export function listTeachers() {
       role: "teacher",
       name: "bobo",
       unit: [],
-      maxCount: 2,
+      maxCount: 3,
     },
     {
       id: "1000000003",
@@ -62,7 +62,7 @@ export function listTeachers() {
       role: "teacher",
       name: "bobobo",
       unit: [],
-      maxCount: 2,
+      maxCount: 3,
     },
     {
       id: "1000000004",
@@ -70,7 +70,7 @@ export function listTeachers() {
       role: "teacher",
       name: "bomb！",
       unit: [],
-      maxCount: 2,
+      maxCount: 3,
     },
   ];
   return teachers;
